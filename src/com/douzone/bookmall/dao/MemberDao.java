@@ -19,17 +19,19 @@ public class MemberDao {
 		boolean result = false;
 		try {
 			conn = getConnection();
-			String sql = "insert into bookmall values(?,?,?,?,?)";
+			
+			String sql = "insert into member values(null,?,?,?,?)";
 			pstmt = conn.prepareStatement(sql);
-
-			pstmt.setInt(1, memberVo.getNo());
-			pstmt.setString(2, memberVo.getName());
-			pstmt.setString(3, memberVo.getCall());
-			pstmt.setString(4, memberVo.getEmail());
-			pstmt.setString(5, memberVo.getPassword());
+			
+			pstmt.setString(1, memberVo.getName());
+			pstmt.setString(2, memberVo.getCall());
+			pstmt.setString(3, memberVo.getEmail());
+			pstmt.setString(4, memberVo.getPassword());
 
 			int count = pstmt.executeUpdate();
+			
 			result = count >= 1;
+			
 		} catch (SQLException e) {
 			System.out.println("error:" + e);
 		} finally {
@@ -53,24 +55,26 @@ public class MemberDao {
 		ResultSet rs = null;
 		try {
 			conn = getConnection();
+			
 			// 3. Statement 객체를 생성
 			stmt = conn.createStatement();
+			
 			// 4. SQL문 실
-			String sql = "select a.no, a.call, a.name, a.email, a.password";
+			String sql = "select member_no,name,call,email,password from member";
 			rs = stmt.executeQuery(sql);
 			// 5. 결과 가져오기
 			while (rs.next()) {
-				MemberVo sv = new MemberVo();
 
 				// String first_name = rs.getString(1);
-				Integer no = rs.getInt(1);
+				Integer member_no = rs.getInt(1);
 				String name = rs.getString(2);
 				String call = rs.getString(3);
 				String email = rs.getString(4);
 				String password = rs.getString(5);
 				// sv.setFirst_name(first_name);
+				MemberVo sv = new MemberVo();
 				
-				sv.setNo(no);
+				sv.setNo(member_no);
 				sv.setName(name);
 				sv.setCall(call);
 				sv.setEmail(email);
@@ -110,7 +114,7 @@ public class MemberDao {
 			// pripertiy -> build path를 등록해줘야된다.
 			// 2. 연결하기 ( jdbc:연결할database://ip:port/database이름 ) port번호는 생략가능하다.
 			// url과 id와 password를 같이 입력해준다. (Connection 객체 얻어오기)
-			String url = "jdbc:mysql://localhost:3306/employees";
+			String url = "jdbc:mysql://localhost:3306/bookmall";
 			conn = DriverManager.getConnection(url, "bookmall", "bookmall");
 		} catch (ClassNotFoundException e) {
 			System.out.println("드라이버 로딩 실패 : " + e);
