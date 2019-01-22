@@ -24,7 +24,7 @@ public class MemberDao {
 			pstmt = conn.prepareStatement(sql);
 			
 			pstmt.setString(1, memberVo.getName());
-			pstmt.setString(2, memberVo.getCall());
+			pstmt.setString(2, memberVo.getTel());
 			pstmt.setString(3, memberVo.getEmail());
 			pstmt.setString(4, memberVo.getPassword());
 
@@ -60,7 +60,7 @@ public class MemberDao {
 			stmt = conn.createStatement();
 			
 			// 4. SQL문 실
-			String sql = "select member_no,name,call,email,password from member";
+			String sql = "select member_no, name, tel, email, password from member";
 			rs = stmt.executeQuery(sql);
 			// 5. 결과 가져오기
 			while (rs.next()) {
@@ -68,22 +68,20 @@ public class MemberDao {
 				// String first_name = rs.getString(1);
 				Integer member_no = rs.getInt(1);
 				String name = rs.getString(2);
-				String call = rs.getString(3);
+				String tel = rs.getString(3);
 				String email = rs.getString(4);
 				String password = rs.getString(5);
 				// sv.setFirst_name(first_name);
 				MemberVo sv = new MemberVo();
 				
-				sv.setNo(member_no);
+				sv.setMember_no(member_no);
 				sv.setName(name);
-				sv.setCall(call);
+				sv.setTel(tel);
 				sv.setEmail(email);
 				sv.setPassword(password);
 				
 				list.add(sv);
 			}
-
-			System.out.println("연결 성공");
 
 		} catch (SQLException e) {
 			System.out.println("error:" + e);

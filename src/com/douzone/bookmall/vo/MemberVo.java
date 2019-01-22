@@ -1,16 +1,16 @@
 package com.douzone.bookmall.vo;
 
 public class MemberVo {
-	private Integer no;
+	private Integer member_no;
 	private String name;
-	private String call;
+	private String tel;
 	private String email;
 	private String password;
-	public Integer getNo() {
-		return no;
+	public Integer getMember_no() {
+		return member_no;
 	}
-	public void setNo(int no) {
-		this.no = no;
+	public void setMember_no(Integer member_no) {
+		this.member_no = member_no;
 	}
 	public String getName() {
 		return name;
@@ -18,11 +18,11 @@ public class MemberVo {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getCall() {
-		return call;
+	public String getTel() {
+		return tel;
 	}
-	public void setCall(String call) {
-		this.call = call;
+	public void setTel(String tel) {
+		this.tel = tel;
 	}
 	public String getEmail() {
 		return email;
@@ -38,7 +38,7 @@ public class MemberVo {
 	}
 	@Override
 	public String toString() {
-		return "MemberDaoTest [no=" + no + ", name=" + name + ", call=" + call + ", email=" + email + ", password="
-				+ password + "]";
+		return "MemberVo [member_no=" + member_no + ", name=" + name + ", tel=" + tel + ", email=" + email
+				+ ", password=" + password + "]";
 	}
 }
