@@ -10,7 +10,7 @@ public class CategoryDaoTest {
 		insertTest("수필");
 		insertTest("컴퓨터/IT");
 		insertTest("예술");
-		getListTest();
+//		getListTest();
 
 	}
 

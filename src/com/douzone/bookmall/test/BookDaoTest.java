@@ -7,11 +7,11 @@ import com.douzone.bookmall.vo.BookVo;
 
 public class BookDaoTest {
 	public static void main(String[] args) {
-		//insertTest("이것이 자바다",30000, 3);
-		//insertTest("나의 산에서",10000, 2);
-		//insertTest("이거슨 파이썬",25000, 3);
-		//insertTest("요거슨 C++",15000, 3);
-		getListTest();
+		insertTest("이것이 자바다",30000, 3);
+		insertTest("나의 산에서",10000, 2);
+		insertTest("이거슨 파이썬",25000, 3);
+		insertTest("요거슨 C++",15000, 3);
+		//getListTest();
 
 	}
 

@@ -7,13 +7,13 @@ import com.douzone.bookmall.vo.MemberVo;
 
 public class MemberDaoTest {
 	public static void main(String[] args) {
-		//insertTest(0,"정우현","010-xxxx-xxxx","hihitxx@naver.com","xxxxx");
-		//insertTest(0,"이성민","010-xxxx-xxxx","xxxxxx@naver.com","xxxxxx");
-		getListTest();
+		insertTest("정우현","010-xxxx-xxxx","hihitxx@naver.com","xxxxx");
+		insertTest("이성민","010-xxxx-xxxx","xxxxxx@naver.com","xxxxxx");
+		//getListTest();
 
 	}
 
-	public static void insertTest(Integer no, String name, String tel, String email, String password) {
+	public static void insertTest(String name, String tel, String email, String password) {
 		MemberVo vo = new MemberVo();
 		vo.setName(name);
 		vo.setTel(tel);
