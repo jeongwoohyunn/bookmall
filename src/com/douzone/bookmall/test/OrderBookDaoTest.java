@@ -12,8 +12,8 @@ public class OrderBookDaoTest {
 
 	public static void main(String[] args) {
 
-		insertTest(4,2,1);
-		getListTest();
+//		insertTest(1,2,2);
+//		getListTest();
 		
 	}
 	public static void insertTest(int amount,int order_no,int book_no) {

@@ -29,7 +29,7 @@ public class OrderBookDao {
 
 			int count = pstmt.executeUpdate();
 
-			result = count >= 1;
+			result = count == 1;
 
 		} catch (SQLException e) {
 			System.out.println("error:" + e);
@@ -71,6 +71,7 @@ public class OrderBookDao {
 				Integer book_no = rs.getInt(1);
 				String book_name = rs.getString(2);
 				Integer amount = rs.getInt(3);
+				
 
 				OrderBookVo ov = new OrderBookVo();
 

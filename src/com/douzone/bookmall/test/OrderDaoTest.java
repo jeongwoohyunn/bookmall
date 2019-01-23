@@ -11,7 +11,7 @@ import com.douzone.bookmall.vo.OrderVo;
 public class OrderDaoTest {
 	public static void main(String[] args) {
 
-		insertTest((20000*3),"부산 신선로 삼성아파트",1);
+		//insertTest((20000*3),"부산 신선로 삼성아파트",1);
 		getListTest();
 
 	}

@@ -37,22 +37,20 @@ public class BookMall {
 		System.out.println("======================================================================================");
 		System.out.println("카트 리스트");
 		System.out.println();
-		CartDaoTest.insertTest(15,1,1);
-		CartDaoTest.insertTest(5,1,2);
-		
+		CartDaoTest.insertTest(2,1,1);		
 		CartDaoTest.getListTest();
 		System.out.println("======================================================================================");
 		System.out.println("주문리스트");
 		System.out.println();
 		
-		OrderDaoTest.insertTest((20000*3),"부산 신선로 삼성아파트",1);
+		OrderDaoTest.insertTest(60000,"부산 신선로 삼성아파트",1);
 		
 		OrderDaoTest.getListTest();
 		System.out.println("======================================================================================");
 		System.out.println("주문목록리스트");
 		System.out.println();
 		
-		OrderBookDaoTest.insertTest(1,1,2);
+		OrderBookDaoTest.insertTest(1,1,1);
 		
 		OrderBookDaoTest.getListTest();
 
