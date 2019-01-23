@@ -12,11 +12,10 @@ public class BookMall {
 	public static void main(String[] args) {
 		System.out.println("회원정보");
 		System.out.println();
-		MemberDaoTest.insertTest("정우현","010-xxxx-xxxx","hihitxx@naver.com","xxxxx");
-		MemberDaoTest.insertTest("이성민","010-xxxx-xxxx","xxxxxx@naver.com","xxxxxx");
+		MemberDaoTest.insertTest("정우현","010-xxxx-xxxx","hihitxx@naver.com","******");
 		
 		MemberDaoTest.getListTest();
-		System.out.println("===============================");
+		System.out.println("======================================================================================");
 		System.out.println("카테고리 리스트");
 		System.out.println();
 		CategoryDaoTest.insertTest("소설");
@@ -25,7 +24,7 @@ public class BookMall {
 		CategoryDaoTest.insertTest("예술");
 		
 		CategoryDaoTest.getListTest();
-		System.out.println("===============================");		
+		System.out.println("======================================================================================");		
 		System.out.println("상품리스트");
 		System.out.println();
 		
@@ -35,25 +34,25 @@ public class BookMall {
 		BookDaoTest.insertTest("요거슨 C++",15000, 3);
 		
 		BookDaoTest.getListTest();
-		System.out.println("===============================");
+		System.out.println("======================================================================================");
 		System.out.println("카트 리스트");
 		System.out.println();
-		CartDaoTest.insertTest(1,1,10);
-		CartDaoTest.insertTest(1,2,5);
+		CartDaoTest.insertTest(15,1,1);
+		CartDaoTest.insertTest(5,1,2);
 		
 		CartDaoTest.getListTest();
-		System.out.println("==================================================================================");
+		System.out.println("======================================================================================");
 		System.out.println("주문리스트");
 		System.out.println();
 		
 		OrderDaoTest.insertTest((20000*3),"부산 신선로 삼성아파트",1);
 		
 		OrderDaoTest.getListTest();
-		System.out.println("==================================================================================");
+		System.out.println("======================================================================================");
 		System.out.println("주문목록리스트");
 		System.out.println();
 		
-		OrderBookDaoTest.insertTest(1,1,1);
+		OrderBookDaoTest.insertTest(1,1,2);
 		
 		OrderBookDaoTest.getListTest();
 

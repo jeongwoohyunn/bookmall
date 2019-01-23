@@ -8,7 +8,7 @@ import com.douzone.bookmall.vo.MemberVo;
 public class MemberDaoTest {
 	public static void main(String[] args) {
 		insertTest("정우현","010-xxxx-xxxx","hihitxx@naver.com","xxxxx");
-		insertTest("이성민","010-xxxx-xxxx","xxxxxx@naver.com","xxxxxx");
+		//insertTest("이성민","010-xxxx-xxxx","xxxxxx@naver.com","xxxxxx");
 		//getListTest();
 
 	}

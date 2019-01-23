@@ -74,7 +74,7 @@ public class OrderBookDao {
 
 				OrderBookVo ov = new OrderBookVo();
 
-				ov.setCategory_no(book_no);
+				ov.setBook_no(book_no);
 				ov.setBook_name(book_name);
 				ov.setAmount(amount);
 

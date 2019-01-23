@@ -8,8 +8,8 @@ import com.douzone.bookmall.vo.CartVo;
 public class CartDaoTest {
 	public static void main(String[] args) {
 
-		//insertTest(15, 1, 1);
-		//insertTest(5, 1, 2);
+		insertTest(15, 1, 1);
+		insertTest(5, 1, 2);
 
 		getListTest();
 		

@@ -12,7 +12,7 @@ public class OrderBookDaoTest {
 
 	public static void main(String[] args) {
 
-		insertTest(1,1,1);
+		insertTest(4,2,1);
 		getListTest();
 		
 	}
